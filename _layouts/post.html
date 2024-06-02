@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>{{ page.title }}</title>
+</head>
+<body class="bg-my-white dark:bg-my-black text-my-very-black dark:text-my-white work-sans-regular">
+    {% include navbar.html %}
+
+    <div class="container mx-auto w-[75%] max-lg:w-full p-6 mt-20">
+            <h3 class="text-4xl font-bold">{{ page.title }}</h3>
+            <p class="font-semibold text-lg text-my-blue dark:text-my-green">0xriki</p>
+            <p class="text-my-gray text-sm mt-5">{{ page.date | date: "%-d %B %Y" }}</p>
+            <div class="mt-5">
+                {% for category in page.categories %}
+                <a href="/category/#{{ category }}" class="category-button-post">{{ category }}</a>
+                {% endfor %}
+            </div>
+            <div class="text-lg text-left my-5">
+                {{ content }}
+            </div>
+
+
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>

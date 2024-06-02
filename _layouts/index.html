@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>0xRikii - blog pribadi</title>
+</head>
+<body class="bg-my-white dark:bg-my-black text-my-very-black dark:text-my-white work-sans-regular">
+    {% include navbar.html %}
+    
+    <div class="container mx-auto w-[75%] max-lg:w-full p-6 mt-20">
+        <p class="text-my-gray mb-5">Recent Post</p>
+        {% assign sorted_posts = paginator.posts | sort: 'date' %}
+        {% for post in sorted_posts %}
+        <div class="">
+            <a class="hover:text-my-black dark:hover:text-my-white text-my-blue dark:text-my-green" href="{{ post.url }}"><h3 class="text-2xl font-bold">{{ post.title }}</h3></a>
+            <div class="mt-5">
+                {% for category in post.categories %}
+                    <a href="/category/#{{ category }}" class="category-button">{{ category }}</a>
+                {% endfor %}
+            </div>
+            <a href="{{ post.url }}"><p class="text-lg my-5">{{ post.excerpt }}</p></a>
+            <a href="{{ post.url }}" class="bg-my-blue dark:bg-my-green rounded-lg p-2 my-5 text-my-white dark:text-my-black inline-block font-bold">More >></a>
+        </div>
+        {% endfor %}
+        
+        <table class="mt-5">
+            <tr>
+                {% if paginator.previous_page %}
+                    <td class="pagination-button"><a href="{{ paginator.previous_page_path }}">Previous</a></td>
+                {% endif %}
+                    <td class="pagination-button table-active"><a href="">{{ paginator.page }}</a></td>
+                {% if paginator.next_page %}
+                    <td class="pagination-button"><a href="{{ paginator.next_page_path }}">Next</a></td>
+                {% endif %}
+            </tr>
+        </table>
+
+        
+    </div>
+
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
