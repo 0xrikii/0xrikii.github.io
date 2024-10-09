@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Bug IDOR Pada Situs Karyawan Universitas Dinamika Bangsa"
-date:   2022-02-22 22:51:31 +0700
+date:   2023-02-22 22:51:31 +0700
 categories: bug-bounty
 ---
 
