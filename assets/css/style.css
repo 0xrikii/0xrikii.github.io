@@ -99,7 +99,14 @@ Remove the default font size and weight for headings.
 h1,
 h2,
 h3,
-h4,
+h4
+{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+},
 h5,
 h6 {
   font-size: inherit;
@@ -416,7 +423,11 @@ Make sure disabled buttons don't get the pointer cursor.
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-img,
+img
+{
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+},
 svg,
 video,
 canvas,
