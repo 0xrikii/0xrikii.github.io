@@ -46,3 +46,11 @@
 .category-button-post {
     @apply border-[1px] text-my-white dark:text-my-black bg-my-blue dark:bg-my-green px-2 py-1 rounded-lg  inline-block text-lg hover:bg-my-gray;
 }
+
+h4 {
+  @apply font-bold text-xl my-5;
+}
+
+img {
+  @apply my-5 rounded shadow;
+}

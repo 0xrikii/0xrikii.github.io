@@ -15,7 +15,7 @@
 <body class="bg-my-white dark:bg-my-black text-my-very-black dark:text-my-white work-sans-regular">
     {% include navbar.html %}
     
-    <div class="container mx-auto w-[75%] max-lg:w-full p-6 mt-20">
+    <div class="container mx-auto w-[60%] max-lg:w-full p-6 mt-20">
         <p class="text-my-gray mb-5">Recent Post</p>
         {% assign sorted_posts = paginator.posts | sort: 'date' %}
         {% for post in sorted_posts %}
