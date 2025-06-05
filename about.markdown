@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<div class="text-center">
+<div class="w-1/2 mx-auto">
     <h4 class="font-semibold text-my-blue dark:text-my-green">0xriki</h4>
     <p>linkedin: @0xriki</p>
     <p class="mb-3">Hi! I’m an Information Technology graduate with a strong interest in cybersecurity, particularly in ethical hacking and penetration testing.</p>
@@ -17,5 +17,4 @@ permalink: /about/
         <li>Python for automation</li>
         <li>CTF and real-world lab experiences</li>
     </ul>
-    </div>
 </div>   
