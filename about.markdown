@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<div class="mx-auto max-lg:w-1/2 w-full">
+<div class="mx-auto lg:w-1/2 w-full">
     <h4 class="font-semibold text-my-blue text-center dark:text-my-green">0xriki</h4>
     <p>linkedin|instagram: @0xriki</p>
     <p class="mb-3">Hi! I’m an Information Technology graduate with a strong interest in cybersecurity, particularly in ethical hacking and penetration testing.</p>
