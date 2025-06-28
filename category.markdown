@@ -4,34 +4,36 @@
 
 layout: default
 ---
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-</style>
-<p class="text-my-gray mb-5">Categories</p>
-<div class="">
+
+<div class="pagination-wrapper">
+        <div class="pagination-container">
     {% for category in site.categories %}
-        <a href="#{{ category[0] }}" class="category-button-post">{{ category[0] }}</a>
+            <a class="pagination-btn" href="#{{ category[0] }}">{{ category[0] }}</a>
     {% endfor %}
+        </div>
 </div>
 
-<div id="index">
-    {% assign categories = site.categories | sort %}
-    {% for category in categories %}
-        <div class="border-[1px] rounded-lg p-5 my-5" id="{{ category[0] }}">
-            <h4 class="text-2xl font-bold my-5">Kategori: {{ category[0] }}</h4>
-            <h2>{{ category[0] }} ({{ category | last | size }})</h2>
-            {% assign sorted_posts = site.posts | sort: 'title' %}
-            {% for post in sorted_posts %}
-                {%if post.categories contains category[0]%}
-                    <div class="">
-                        <a class="hover:text-my-black dark:hover:text-my-white text-my-blue dark:text-my-green" href="{{ post.url }}"><h3 class="text-2xl font-bold">{{ post.title }}</h3></a>
-                        <a href="{{ post.url }}"><p class="text-lg my-5">{{ post.excerpt }}</p></a>
-                        <a href="{{ post.url }}" class="bg-my-blue dark:bg-my-green rounded-lg p-2 my-5 text-my-white dark:text-my-black inline-block font-bold">More >></a>
-                    </div>
-                {%endif%}
-            {% endfor %}
-        </div>
+{% assign categories = site.categories | sort %}
+{% for category in categories %}
+<h4 class="text-2xl font-bold my-5">Kategori: {{ category[0] }}</h4>
+<h2>{{ category[0] }} ({{ category | last | size }})</h2>
+<div class="blog-grid" id="{{ category[0] }}">
+    {% assign sorted_posts = site.posts | sort: 'title' %}
+    {% for post in sorted_posts %}
+        {%if post.categories contains category[0]%}
+        <article class="blog-card fade-in-up" onclick="window.location.href='{{ post.url }}'">
+            <span class="card-category">Security</span>
+            <h2 class="card-title">Bug IDOR pada Situs Karyawan UNAMA</h2>
+            <p class="card-description">
+                Penjelasan detail tentang vulnerability IDOR yang ditemukan pada sistem manajemen karyawan UNAMA, 
+                termasuk analisis dampak dan rekomendasi perbaikan keamanan.
+            </p>
+            <a href="#" class="read-more-btn">
+                Read More
+                <span class="btn-icon">→</span>
+            </a>
+        </article>
+    {%endif%}
     {% endfor %}
-</div>
+    </div>
+{% endfor %}
