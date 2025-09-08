@@ -67,6 +67,242 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Background Animation */
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--accent-gray-light);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: float 12s infinite linear;
+            box-shadow: 0 0 8px rgba(136, 136, 136, 0.5);
+        }
+
+        .particle:nth-child(1) {
+            width: 4px;
+            height: 4px;
+            left: 5%;
+            animation-delay: 0s;
+            animation-duration: 10s;
+        }
+
+        .particle:nth-child(2) {
+            width: 6px;
+            height: 6px;
+            left: 15%;
+            animation-delay: 0.5s;
+            animation-duration: 12s;
+        }
+
+        .particle:nth-child(3) {
+            width: 3px;
+            height: 3px;
+            left: 25%;
+            animation-delay: 1s;
+            animation-duration: 8s;
+        }
+
+        .particle:nth-child(4) {
+            width: 5px;
+            height: 5px;
+            left: 35%;
+            animation-delay: 1.5s;
+            animation-duration: 11s;
+        }
+
+        .particle:nth-child(5) {
+            width: 4px;
+            height: 4px;
+            left: 45%;
+            animation-delay: 2s;
+            animation-duration: 9s;
+        }
+
+        .particle:nth-child(6) {
+            width: 7px;
+            height: 7px;
+            left: 55%;
+            animation-delay: 2.5s;
+            animation-duration: 13s;
+        }
+
+        .particle:nth-child(7) {
+            width: 3px;
+            height: 3px;
+            left: 65%;
+            animation-delay: 3s;
+            animation-duration: 7s;
+        }
+
+        .particle:nth-child(8) {
+            width: 5px;
+            height: 5px;
+            left: 75%;
+            animation-delay: 3.5s;
+            animation-duration: 10s;
+        }
+
+        .particle:nth-child(9) {
+            width: 4px;
+            height: 4px;
+            left: 85%;
+            animation-delay: 4s;
+            animation-duration: 12s;
+        }
+
+        .particle:nth-child(10) {
+            width: 6px;
+            height: 6px;
+            left: 95%;
+            animation-delay: 4.5s;
+            animation-duration: 11s;
+        }
+
+        .particle:nth-child(11) {
+            width: 3px;
+            height: 3px;
+            left: 10%;
+            animation-delay: 5s;
+            animation-duration: 8s;
+        }
+
+        .particle:nth-child(12) {
+            width: 5px;
+            height: 5px;
+            left: 20%;
+            animation-delay: 5.5s;
+            animation-duration: 10s;
+        }
+
+        .particle:nth-child(13) {
+            width: 4px;
+            height: 4px;
+            left: 30%;
+            animation-delay: 6s;
+            animation-duration: 9s;
+        }
+
+        .particle:nth-child(14) {
+            width: 6px;
+            height: 6px;
+            left: 40%;
+            animation-delay: 6.5s;
+            animation-duration: 12s;
+        }
+
+        .particle:nth-child(15) {
+            width: 3px;
+            height: 3px;
+            left: 50%;
+            animation-delay: 7s;
+            animation-duration: 7s;
+        }
+
+        .particle:nth-child(16) {
+            width: 5px;
+            height: 5px;
+            left: 60%;
+            animation-delay: 7.5s;
+            animation-duration: 11s;
+        }
+
+        .particle:nth-child(17) {
+            width: 4px;
+            height: 4px;
+            left: 70%;
+            animation-delay: 8s;
+            animation-duration: 9s;
+        }
+
+        .particle:nth-child(18) {
+            width: 6px;
+            height: 6px;
+            left: 80%;
+            animation-delay: 8.5s;
+            animation-duration: 13s;
+        }
+
+        .particle:nth-child(19) {
+            width: 3px;
+            height: 3px;
+            left: 90%;
+            animation-delay: 9s;
+            animation-duration: 8s;
+        }
+
+        .particle:nth-child(20) {
+            width: 5px;
+            height: 5px;
+            left: 12%;
+            animation-delay: 9.5s;
+            animation-duration: 10s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.6;
+            }
+            95% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Subtle gradient overlay */
+        .gradient-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, transparent 0%, rgba(10, 10, 10, 0.1) 100%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Gentle breathing effect */
+        .breathing-effect {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(102, 102, 102, 0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: breathe 8s ease-in-out infinite;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        @keyframes breathe {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.3;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.1);
+                opacity: 0.1;
+            }
         }
 
         /* Modern Navbar */
@@ -229,27 +465,109 @@
             margin-top: 90px;
         }
 
-        /* Clean Header */
-        .header {
-            text-align: center;
-            margin-bottom: var(--space-xl);
+
+        /* Portfolio Section - Cigarettes After Sex Theme */
+        .portfolio-section {
+            margin: var(--space-xl) 0;
             padding: var(--space-xl) 0;
             border-bottom: 1px solid var(--border-color);
         }
 
-        .title {
-            font-size: clamp(2.5rem, 8vw, 4rem);
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: var(--space-sm);
-            letter-spacing: -0.02em;
+        .portfolio-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .subtitle {
-            font-size: 1.1rem;
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto var(--space-lg);
+            border: 3px solid var(--accent-gray);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            filter: grayscale(20%) contrast(1.1);
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            filter: grayscale(0%) contrast(1.2);
+        }
+
+        .portfolio-title {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 300;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            letter-spacing: 0.02em;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .portfolio-subtitle {
+            font-size: 1.2rem;
             color: var(--text-secondary);
-            font-weight: 400;
+            font-weight: 300;
+            margin-bottom: var(--space-lg);
             letter-spacing: 0.01em;
+            opacity: 0.8;
+        }
+
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            margin-top: var(--space-lg);
+        }
+
+        .social-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--radius-sm);
+        }
+
+        .social-link:hover {
+            color: var(--accent-gray-light);
+            background: var(--bg-card);
+        }
+
+        /* About Section */
+        .about-section {
+            margin: var(--space-xl) 0;
+            padding: var(--space-xl) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-title {
+            font-size: 2rem;
+            font-weight: 300;
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            text-align: center;
+            letter-spacing: 0.01em;
+        }
+
+        .about-content {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        .about-content p {
+            margin-bottom: var(--space-md);
         }
 
         /* Clean Blog Grid */
@@ -334,6 +652,7 @@
             color: var(--text-primary);
             border-color: var(--accent-gray);
         }
+
 
         /* Clean Pagination */
         .pagination {
@@ -443,13 +762,39 @@
                 padding: var(--space-md);
             }
 
-            .title {
-                font-size: clamp(2rem, 10vw, 3rem);
-            }
+
 
             .pagination {
                 flex-wrap: wrap;
                 gap: var(--space-xs);
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .portfolio-title {
+                font-size: clamp(2rem, 10vw, 3rem);
+            }
+
+            .about-title {
+                font-size: 1.75rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+
+            /* Reduce animation intensity on mobile */
+            .particle {
+                opacity: 0.4;
+            }
+
+            .breathing-effect {
+                width: 400px;
+                height: 400px;
             }
         }
 
@@ -468,13 +813,7 @@
                 margin-top: 70px;
             }
 
-            .header {
-                padding: var(--space-lg) 0;
-            }
 
-            .title {
-                font-size: clamp(1.75rem, 12vw, 2.5rem);
-            }
 
             .blog-card {
                 padding: var(--space-sm);
@@ -485,10 +824,63 @@
                 height: 35px;
                 font-size: 0.8rem;
             }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+
+            .portfolio-title {
+                font-size: clamp(1.75rem, 12vw, 2.5rem);
+            }
+
+            .about-title {
+                font-size: 1.5rem;
+            }
+
+            /* Further reduce animation on small mobile */
+            .particle {
+                opacity: 0.3;
+            }
+
+            .breathing-effect {
+                width: 300px;
+                height: 300px;
+            }
         }
     </style>
 </head>
 <body x-data="{ loading: true, mobileMenuOpen: false }" x-init="setTimeout(() => loading = false, 800)">
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+    
+    <!-- Breathing Effect -->
+    <div class="breathing-effect"></div>
+
     <!-- Loading Screen -->
     <div class="loading" :class="{ 'hidden': !loading }">
         <div class="loading-spinner"></div>
@@ -503,7 +895,6 @@
             
             <div class="navbar-menu">
                 <a href="/" class="nav-link active">Home</a>
-                <a href="/about" class="nav-link">About</a>
                 <a href="/category" class="nav-link">Categories</a>
                 <!-- <a href="/contact" class="nav-link">Contact</a> -->
             </div>
@@ -518,7 +909,6 @@
         <div class="mobile-menu" :class="{ 'show': mobileMenuOpen }">
             <div class="mobile-nav-links">
                 <a href="/" class="mobile-nav-link active">Home</a>
-                <a href="/about" class="mobile-nav-link">About</a>
                 <a href="/category" class="mobile-nav-link">Categories</a>
                 <!-- <a href="/contact" class="mobile-nav-link">Contact</a> -->
             </div>
@@ -527,11 +917,42 @@
 
     <!-- Main Container -->
     <div class="container">
-        <!-- Clean Header -->
-        <header class="header">
-            <h1 class="title">0xRikii</h1>
-            <p class="subtitle">Cybersecurity Enthusiast</p>
-        </header>
+        <!-- Portfolio Section -->
+        <section class="portfolio-section">
+            <div class="portfolio-container">
+                <img src="/assets/image/profile.jpg" alt="0xRikii Profile" class="profile-image">
+                <h1 class="portfolio-title">0xRikii</h1>
+                <p class="portfolio-subtitle">Cybersecurity Enthusiast & Junior Penetration Tester</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">LinkedIn: @0xriki</a>
+                    <a href="#" class="social-link">Instagram: @0xriki</a>
+                    <a href="#" class="social-link">GitHub: @0xrikii</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="about-container">
+                <h2 class="about-title">About Me</h2>
+                <div class="about-content">
+                    <p>
+                        Hi! I'm an Information Technology graduate with a strong interest in cybersecurity, 
+                        particularly in ethical hacking and penetration testing.
+                    </p>
+                    <p>
+                        I spend most of my time learning through hands-on labs on platforms like TryHackMe 
+                        and Hack The Box, while also participating in Capture The Flag (CTF) competitions 
+                        to strengthen my practical skills.
+                    </p>
+                    <p>
+                        This blog is where I share what I've learned—ranging from vulnerability write-ups, 
+                        walkthroughs of CTF challenges, notes from my studies, and my journey toward becoming 
+                        a professional penetration tester.
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <!-- Clean Blog Grid -->
         <div class="blog-grid">
@@ -563,6 +984,7 @@
             </article>
             {% endfor %}
         </div>
+
 
         <!-- Clean Pagination -->
         {% if paginator.total_pages > 1 %}
