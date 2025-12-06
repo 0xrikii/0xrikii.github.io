@@ -5,7 +5,9 @@ date:   2025-12-06 19:02:31 +0700
 categories: bug-bounty
 ---
 
-Baru-baru ini, saya menemukan celah keamanan yang cukup serius pada website Akademi Crypto milik Timothy Ronald. Website tersebut dibangun menggunakan CMS WordPress dan menggunakan salah satu plugin dengan versi yang memiliki kerentanan Information Disclosure. Celah keamanan ini memungkinkan penyerang (attacker) untuk mengakses dan melihat informasi news yang seharusnya hanya dapat diakses oleh member Akademi Crypto yang telah membayar keanggotaan. Temuan ini cukup mengkhawatirkan karena dapat merugikan baik pihak pengelola platform maupun para member yang membayar untuk mendapatkan akses eksklusif tersebut.
+Baru-baru ini, saya menemukan celah keamanan yang cukup serius pada website Akademi Crypto milik Timothy Ronald. Website tersebut dibangun menggunakan CMS WordPress dan menggunakan salah satu plugin dengan versi yang memiliki kerentanan Information Disclosure. 
+
+Celah keamanan ini memungkinkan penyerang (attacker) untuk mengakses dan melihat informasi news yang seharusnya hanya dapat diakses oleh member Akademi Crypto yang telah membayar keanggotaan. Temuan ini cukup mengkhawatirkan karena dapat merugikan baik pihak pengelola platform maupun para member yang membayar untuk mendapatkan akses eksklusif tersebut.
 
 Vulnerability ini terjadi karena plugin WordPress yang digunakan memiliki konfigurasi keamanan yang lemah atau bug pada versi tertentu, yang memungkinkan siapa saja untuk melakukan bypass terhadap mekanisme autentikasi dan otorisasi yang seharusnya melindungi konten berbayar. Dengan memanfaatkan celah ini, seseorang yang tidak memiliki akses resmi dapat membaca informasi news yang merupakan salah satu nilai jual dari membership Akademi Crypto.
 
