@@ -956,8 +956,8 @@
 
         <!-- Clean Blog Grid -->
         <div class="blog-grid">
-            {% assign sorted_posts = paginator.posts | sort: 'date' reverse  %}
-            {% for post in sorted_posts %}
+            {% assign sorted_posts = paginator.posts%}
+            {% for post in sorted_posts | sort: 'date' reverse %}
             <article class="blog-card" onclick="window.location.href='{{ post.url }}'">
                 <div class="card-category">
                     {% for category in post.categories %}
