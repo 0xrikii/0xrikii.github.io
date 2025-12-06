@@ -22,8 +22,8 @@ layout: default
     {% for post in sorted_posts %}
         {%if post.categories contains category[0]%}
         <article class="blog-card fade-in-up" onclick="window.location.href='{{ post.url }}'">
-            <span class="card-category">Security</span>
-            <h2 class="card-title">Bug IDOR pada Situs Karyawan UNAMA</h2>
+            <span class="card-category">{{ category[0 }}</span>
+            <h2 class="card-title">{{ post.title }}</h2>
             <p class="card-description">
                 Penjelasan detail tentang vulnerability IDOR yang ditemukan pada sistem manajemen karyawan UNAMA, 
                 termasuk analisis dampak dan rekomendasi perbaikan keamanan.
